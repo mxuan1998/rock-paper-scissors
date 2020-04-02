@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+    function computerPlay() {
+        let action = Math.floor(Math.random()*3);
+        if (action ==0) {
+            return "Rock";
+        } else if (action == 1) {
+            return "Paper";
+        } else {
+            return "Scissors";
+        }
+    }
+
+    function playRound(playerSelection, computerSelection){
+        if (playerSelection == computerSelection){
+            return 0;
+        } else if (playerSelection = "Paper" && computerSelection = "Rock"
+            || playerSelection = "Rock" && computerSelection = "Scissors"
+            || playerSelection = "Scissors" && computerSelection = "Paper"){
+            return playerScore += 1;
+        } else {
+            return computerScore += 1;
+        }
+    
+    function game() {
+        for (let i=1; i<6; i++) {
+            let computerSelection = computerPlay();
+            let playSelection = playerPlay();
+            return (playRound(playerSelection, computerSelection));
+            if (playerScore > computerScore) {
+                return ("You won!");
+            } else if (playerScore = computerScore) {
+                return ("It is a tie.");
+            } else {
+                return ("You lost.");
+            }
+        }
+    }
+        
+    }
+
+  </script>
+</body>
+</html>
