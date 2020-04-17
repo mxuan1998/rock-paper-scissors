@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang=”en”>
+  <head>
+	<title>Rock Paper Scissors</title>
+ 	<meta charset="UTF-8">
+  </head>
+  <body>
+    <script>
+    let playerScore = 0;
+    let computerScore = 0;
+    let draw = 0;
+
+    function computerPlay(){
+        let action = Math.floor(Math.random()*3);
+        if (action === 0){
+            return "Rock";
+        } else if (action === 1){
+            return "Paper";
+        } else {
+            return "Scissors";
+        }
+    }
+    
+    function playRound(playerSelection, computerSelection){
+        let playerSelection = playerinput.toLowerCase();
+        let computerSelection = computerPlay.toLowerCase();
+        if (playerSelection === computerSelection) {
+            draw++;
+            return "Draw";
+        } else if (playerSelection = "paper" && computerSelection = "rock"
+            || playerSelection = "rock" && computerSelection = "scissors"
+            || playerSelection = "scissors" && computerSelection = "paper"){
+            playerScore++;
+            return "Player won!";
+        } else {
+            computerScore++;
+            return "Computer won!";
+        }
+    }
+
+    function game(){
+        for (let i=0; i<5; i++){
+            return (playRound(playerSelection, computerSelection));
+            if (playerScore > computerScore){
+                return "You won!"
+            } else if (playerScore < computerScore){
+                return "Computer won!"
+            } else {
+                return "It's a draw."
+            }
+
+        }
+    }
+
+    </script>
+  </body>
+</html>
