@@ -2,7 +2,6 @@ let playerScore = 0;
 let computerScore = 0;
 let draw = 0;
 let rounds = 0;
-let result = "";
 
     function computerPlay(){
         let action = Math.floor(Math.random()*3);
@@ -16,7 +15,7 @@ let result = "";
     }
     
     function playRound(playerSelection, computerSelection){
-        let playerSelection = playerSelection.toLowerCase();
+        const gameResult = document.createElement("div");
         gameResult.classList.add("gameResult");
 
         if (playerSelection === computerSelection) {
@@ -28,12 +27,12 @@ let result = "";
             || playerSelection === "scissors" && computerSelection === "paper"){
             gameResult.textContent = "Your won!";
             resultsContainer.appendChild(gameResult);
-            playerWins +=1;
+            playerScore +=1;
             document.getElementById("playerScoreContainer").textContent="Your score: " + playerWins;   
         } else {
             gameResult.textContent = "Computer won!";
             resultsContainer.appendChild(gameResult);
-            computerWins +=1;
+            computerScore +=1;
             document.getElementById("computerScoreContainer").textContent="Computer score: " + computerWins; 
         }
     }
